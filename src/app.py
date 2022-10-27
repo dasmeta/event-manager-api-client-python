@@ -7,6 +7,10 @@ app = Flask(__name__)
 
 event_service = EventService(app.logger)
 
+@app.route('/')
+def get_root():
+    return {'isSuccess': 'true'}
+
 @app.route('/publish', methods=['POST'])
 def publish():
     data = request.json

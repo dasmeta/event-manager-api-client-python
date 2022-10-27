@@ -9,10 +9,10 @@ services:
       - .:/app
     environment:
       FLASK_DEBUG: "True"
+      API_HOST: ${API_HOST}
       API_USER_ID: ${API_USER_ID}
       API_USER_GUID: ${API_USER_GUID}
       API_USER_ROLE_NAME: ${API_USER_ROLE_NAME}
       API_USER_ROLE_TYPE: ${API_USER_ROLE_TYPE}
-      API_HOST: '192.168.88.38:1357'
       JWT_SECRET: ${JWT_SECRET}
       JWT_ALGORITHM: 'HS256'

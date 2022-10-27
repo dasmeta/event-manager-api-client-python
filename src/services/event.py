@@ -1,5 +1,3 @@
-import os
-import json
 from services.api.events_api_client import EventsApiClient
 
 

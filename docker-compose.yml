@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  emac_p:
+    build: .
+    container_name: event-manager-api-client-python
+    ports:
+      - "8000:5000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_DEBUG: "True"
+      API_USER_ID: ${API_USER_ID}
+      API_USER_GUID: ${API_USER_GUID}
+      API_USER_ROLE_NAME: ${API_USER_ROLE_NAME}
+      API_USER_ROLE_TYPE: ${API_USER_ROLE_TYPE}
+      API_HOST: '192.168.88.38:1357'
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_ALGORITHM: 'HS256'

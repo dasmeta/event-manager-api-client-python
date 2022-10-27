@@ -7,14 +7,9 @@ app = Flask(__name__)
 
 event_service = EventService(app.logger)
 
-@app.route('/')
-def hello_world():
-    return 'Hello, Docker!'
-
 @app.route('/publish', methods=['POST'])
 def publish():
     data = request.json
-    # app.logger.info(data)
     try:
         event_service.publish(
             topic = data['topic'],

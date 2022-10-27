@@ -35,16 +35,6 @@ class ApiClient:
         if self.__jwt_token is not None:
             headers["Authorization"] = "Bearer {}".format(self.__jwt_token)
 
-        r = {
-            'self.__api_host': self.__api_host,
-            'method': method,
-            'path': self.__base_path + path,
-            'body': body,
-            'headers': headers,
-        }
-        self.__logger.info('rrrrrrrrr')
-        self.__logger.info(r)
-
         conn.request(method, self.__base_path + path, body, headers)
         response = conn.getresponse()
 

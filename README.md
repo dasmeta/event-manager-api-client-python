@@ -3,9 +3,7 @@
 ## Table of contents
  * [Introduction](#introduction)
  * [Requirements](#requirements)
- * [Installation](#installation)
- * [Configuration](#configuration)
- * [Troubleshooting & FAQ](#troubleshooting-faq)
+ * [Set Up](#set-up)
 
 ## Introduction
 The service is based on [Python Flask](https://flask.palletsprojects.com/en/2.2.x/) framework.
@@ -17,7 +15,7 @@ The service is based on [Python Flask](https://flask.palletsprojects.com/en/2.2.
 - [Docker 20.*](https://docs.docker.com/engine/install/)
 - [Python 3.*](https://www.python.org/downloads/)
   
-## Project Set Up
+## Set Up
 - Set up git to have ssh access to the repository
 - Clone the source into local machine
 ```shell
